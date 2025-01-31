@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="">
+</head>
+
+
+
+<style>
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+    font-family: Arial, Helvetica, sans-serif;
+   /* height: 100%; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/img/katana.webp) center center;
+    background-size: cover;
+}
+
+
+.community-section {
+    padding: 50px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 50px; /* Agrega bordes circulares a la sección */
+}
+
+.community-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Espacio entre el h1 y el p */
+}
+
+.community-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Espacio entre el p y el siguiente elemento */
+}
+
+.community-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.community-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Agrega bordes circulares a las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+}
+
+.community-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.community-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.community-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.community-card a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que la cabecera esté siempre encima */
+    background-color: #f9f9f9;
+    
+  }
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bb5;
+    text-decoration: none;
+}
+    .logo .primary {
+  color: #1a73e8; /* Azul */
+}
+
+.logo .secondary {
+  color: black;
+}
+
+.header .logo:hover {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   /* height: 100vh; */
+    background-color: #f4f4f4;
+}
+.rating-container {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px; /* Aumenta el margen derecho para más espacio */
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #ddd; /* Cambia el color de fondo a gris */
+    color: black; /* Cambia el color del texto a negro */
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Posiciona el tooltip debajo del texto */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.rating-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.rating-wrapper {
+    display: flex;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+@media (max-width: 600px) {
+    .header{
+    position: relative;
+    }
+    .community-section {
+        padding: 20px;
+    }
+    .community-section h1 {
+        font-size: 30px;
+    }
+    .community-section p {
+        font-size: 20px;
+    }
+    .community-card {
+        width: 70%; /* Para que las tarjetas se adapten mejor */
+        height: 50%;
+        align-items: center;
+        padding: 5px;
+    }
+    .community-card a{
+        margin-top: 10px;
+    }
+    .community-card p{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .community-card h3{
+        font-size: 20px;
+    }
+    .rating-container {
+        width: 90%;
+        font-size: 12px;
+        height: 70%;
+    }
+}
+    
+
+</style>
+
+<body class="community-page">
+
+    <div class="header">
+        <a href="/pag/pag1.html" class="logo"><span class="primary">MANGA</span><span class="secondary">VERSO</span></a>
+      </div>
+    
+
+    <section class="community-section">
+        <h1>Únete a Nuestra Comunidad</h1>
+        <p>Descubre recursos, conecta con otros miembros, y sé parte de algo increíble.</p>
+
+        <div class="community-cards">
+            <div class="community-card">
+                <h3>Foros de Discusión</h3>
+                <p>Participa en conversaciones sobre temas que te interesan.</p>
+                <a href="#">Explorar Foros</a>
+            </div>
+            <div class="community-card">
+                <h3>Eventos</h3>
+                <p>Únete a talleres, charlas y reuniones de la comunidad.</p>
+                <a href="#">Ver Eventos</a>
+            </div>
+            <div class="community-card">
+                <h3>Recursos</h3>
+                <p>Accede a tutoriales, documentación y herramientas útiles.</p>
+                <a href="#">Explorar Recursos</a>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://x.com/home" target="_blank"><img src="/img/twitter.avif" alt="Twitter" width="16" height="16">  Twitter</a>
+            <a href="https://ar.linkedin.com/jobs" target="_blank"><img src="/img/linkedin.png" alt="LinkedIn" width="16" height="16">  LinkedIn</a>
+            <a href="https://www.instagram.com/explore/" target="_blank"><img src="/img/instagram.png" alt="Instagram" width="16" height="16"> Instagram</a>
+        </div>
+    </section>
+
+    <div class="rating-wrapper">
+        <div class="rating-container">
+            <img src="/img/arcangel.jpg" alt="Perfil Ándrea" width="50" height="50">
+            <h2>Fácil y comodo</h2>
+            <div class="stars" data-rating="0">
+                ★ ★ ★ ★ ★
+            </div>
+            <div class="tooltip">Valoración de Ándrea</div>
+        </div>
+        
+        <div class="rating-container">
+            <img src="/img/ganyu.jpg" alt="Perfil Félix" width="50" height="50">
+            <h2>Mucha variedad</h2>
+            <div class="stars" data-rating="0">
+                ★ ★ ★ ★ ★
+            </div>
+            <div class="tooltip">Valoración de Félix</div>
+        </div>
+        
+        <div class="rating-container">
+            <img src="/img/herta.webp" alt="Perfil Arthur" width="50" height="50">
+            <h2>Bonito diseño</h2>
+            <div class="stars" data-rating="0">
+                ★ ★ ★ ★ 
+            </div>
+            <div class="tooltip">Valoración de Arthur</div>
+        </div>
+    </div>
+
+</body>
+</html>
