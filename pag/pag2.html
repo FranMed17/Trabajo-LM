@@ -216,7 +216,21 @@
         </div>
         <div class="genre">Seinen</div>
       </div>
-      
+      <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+          this.classList.toggle('active');
+          document.querySelector('.nav').classList.toggle('active');
+          document.querySelector('.header').classList.toggle('active');
+          document.querySelector('.overlay').classList.toggle('active');
+        });
+    
+        document.querySelector('.overlay').addEventListener('click', function() {
+          document.querySelector('.menu-toggle').classList.remove('active');
+          document.querySelector('.nav').classList.remove('active');
+          document.querySelector('.header').classList.remove('active');
+          this.classList.remove('active');
+        });
+      </script>
 
     </body>
     </html>
