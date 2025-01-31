@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logo .primary {
+    color: #1a73e8; /* Azul */
+  }
+  
+  .logo .secondary {
+    color: black;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+  
+  .search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  /* A partir de aquí, el main */
+
+  /* Sección principal */
+  
+.main-content {
+    background-color: white;
+  }
+  
+  /* Encabezado de categorías */
+  .section-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 25px; /* Agrega margen superior para separar del encabezado */
+  }
+  
+  .category-button {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Contenedor de tarjetas */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 40px; /* Espacio entre las tarjetas */
+  }
+  
+  /* Tarjetas individuales */
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Escala la tarjeta al pasar el ratón */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 85%;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+  }
+  
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-info .tag {
+    color: white;
+    background-color: #4caf50;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  .card-info .rating {
+    color: #ffb400;
+  }
+  
+  .genre {
+    padding: 5px 0;
+    font-weight: bold;
+    background-color: rgba(255, 165, 0, 0.2);
+  }
+  
+  /* Botón Ver todo */
+  .view-all {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .view-all:hover {
+    background-color: #0056c2;
+    padding: 10px 20px; /* Asegura que el tamaño del botón no cambie */
+  }
+  
+  .left-image {
+    transform: translate(0, 190px);
+    float: left;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 500px; /* Ajusta el tamaño según sea necesario */ 
+    margin-right: 10px; /* Espacio entre la imagen y el contenido */
+  }
+  
+  .right-image {
+    transform: translate(0, 190px);
+
+    float: right;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 500px; /* Ajusta el tamaño según sea necesario */
+    margin-left: 10px; /* Espacio entre la imagen y el contenido */
+  }
+
+  .icono-cuenta {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 1600px) {
+
+  .card-image{
+  height: 80%;
+ }
+  }
+  @media (max-width: 1500px) {
+
+    .right-image,.left-image{
+      display: none;
+      }
+      .card-image{
+        height: 86%;
+    }
+  }
+ @media (max-width: 1200px) {
+  .right-image,.left-image{
+   display: none;
+   }
+  }
+ @media (max-width:1100px) {
+  .card-image{
+   height: 83%;
+  }
+}
+@media (max-width:1000px) {
+    .card-image{
+     height: 82%;
+    }
+ 
+  }
+  @media (max-width:900px) {
+    .card-image{
+      height: 80%;
+     } 
+     .card-info {
+       padding: 10px 10px;
+       font-size: 15px;
+     }
+     .genre {
+       font-size: 20px;
+       
+     }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 5 columnas */
+      gap: 10px; /* Espacio entre las tarjetas */
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  @media (max-width:750px) {
+    .card-image{
+     height: 80%;
+    } 
+    .card-info {
+      padding: 10px 10px;
+      font-size: 15px;
+    }
+    .genre {
+      font-size: 20px;
+      
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 5 columnas */
+      gap: 10px; /* Espacio entre las tarjetas */
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  .menu-toggle {
+    display: none;
+  }
+    
+
+  
