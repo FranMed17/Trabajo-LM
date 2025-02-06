@@ -60,11 +60,11 @@ body {
 }
 
 .category-button {
-  padding: 10px 20px;
-  background-color: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: rgb(228, 226, 223);
+  color: black;
+  border: 2px solid black;
+  border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -316,7 +316,20 @@ display: none;
     padding-right: 5%;
   }
 }
-
+.nav-item.active{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.search-bar.active{
+  font-size: 20px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+.icono-cuenta.active{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+}
 .nav.active {
   position: fixed;
   top: 0;
