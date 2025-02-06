@@ -46,7 +46,7 @@
             </p>
         </div>
     </div>
-    <p class="view-all">CAPITULO</p>
+    <p class="view-all">CAPITULO 1</p>
     <div class="chapters">
         <div class="chapter">
             <img src="/img/eightysix/003.jpg" alt="1">
@@ -117,27 +117,21 @@
         <div class="chapter">
             <img src="/img/eightysix/028-029.jpg" alt="24">
         </div>
-        
-        
-
-            
-
-
-        
-        
-
-      
-
-   
-        
-        
-        
-        
-
-
-
-           
-       
     </div>
+    <button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()">⬆</button>
+    <script>
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > window.innerHeight / 2 || document.documentElement.scrollTop > window.innerHeight / 2) {
+                scrollToTopBtn.style.display = "flex";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

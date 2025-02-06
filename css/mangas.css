@@ -140,6 +140,28 @@ body {
   vertical-align: middle;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px; /* Ajusta el ancho */
+  height: 70px; /* Ajusta la altura */
+  background-color: #f9f9f9;
+  color: #000; /* Cambia el color de la flecha a negro */
+  font-size: 30px; /* Ajusta el tamaño de la flecha */
+  border: none;
+  border-radius: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  margin-right: 30px; /* Ajusta el margen derecho */
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+}
 
 @media (max-width: 1100px) {
   .container{
