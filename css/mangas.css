@@ -137,7 +137,9 @@ body {
     text-align: center;
     
 }
-
+.menu-toggle{
+  display: none;
+}
 .icono-cuenta {
   width: 20px;
   height: 20px;
@@ -185,8 +187,9 @@ body {
   display: flex;
   flex-direction: column; /* Cambia de horizontal a vertical */
   align-items: center; /* Centra los elementos horizontalmente */
-  margin-left: 20%;
+  margin-left: 2%;
   transform: none;
+  
 }
 }
 
